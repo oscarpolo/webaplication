@@ -1,0 +1,29 @@
+﻿@model List<WebApplication3.Models.Employees.EmployeeViewModel>
+
+<a class="nav-link text-dark" asp-area="" asp-controller="Employees" asp-action="EmployeesById">Buscar por Id</a>
+
+
+
+<table>
+    <tr>
+        <th>
+            documento
+        </th>
+        <th>
+            numero
+        </th>
+        <th>
+            area
+        </th>
+    </tr>
+ 
+        @foreach (var item in @Model)
+        {
+            <tr>
+                <td>@item.DocumentId</td>
+                <td>@item.EmployNumber</td>
+                <td>@item.CostCenter</td>
+            </tr>
+            }
+ 
+</table>
